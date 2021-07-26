@@ -18,9 +18,7 @@ class HomeView extends StatelessWidget {
       ) {
         return Scaffold(
           body: Center(
-            child: Text(
-              'HomeView',
-            ),
+            child: Text('HomeView'),
           ),
         );
       },
