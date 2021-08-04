@@ -10,7 +10,7 @@ ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
 );
 
-List<ThemeData> appThemes = [
+List<ThemeData> appThemes = <ThemeData>[
   lightTheme,
   darkTheme,
 ];

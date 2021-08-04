@@ -3,20 +3,20 @@ import 'package:fantasia/app/theme/app_font.dart';
 import 'package:flutter/material.dart';
 
 class BookOfTheMonth extends StatelessWidget {
+  const BookOfTheMonth({
+    required this.title,
+    required this.author,
+    required this.imageURL,
+    this.onTap,
+    this.margin = 18,
+    Key? key,
+  }) : super(key: key);
+
   final String title;
   final String author;
   final String imageURL;
   final double margin;
   final VoidCallback? onTap;
-
-  const BookOfTheMonth(
-      {Key? key,
-      required this.title,
-      required this.author,
-      required this.imageURL,
-      this.onTap,
-      this.margin = 18})
-      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +29,8 @@ class BookOfTheMonth extends StatelessWidget {
         decoration: BoxDecoration(
           color: colorBlue,
           borderRadius: BorderRadius.circular(15),
-          boxShadow: [
-            BoxShadow(
+          boxShadow: <BoxShadow>[
+            const BoxShadow(
               color: Color(0x3f000000),
               blurRadius: 20,
               offset: Offset(0, 6),
@@ -39,13 +39,13 @@ class BookOfTheMonth extends StatelessWidget {
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
+          children: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(18.0),
+              padding: const EdgeInsets.all(18),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: <Widget>[
                   Text(
                     title,
                     style: fontHeading1.copyWith(color: colorWhite),
@@ -67,8 +67,8 @@ class BookOfTheMonth extends StatelessWidget {
                   decoration: BoxDecoration(
                     image: DecorationImage(image: NetworkImage(imageURL)),
                     borderRadius: BorderRadius.circular(5),
-                    boxShadow: [
-                      BoxShadow(
+                    boxShadow: <BoxShadow>[
+                      const BoxShadow(
                         color: Color(0x3f000000),
                         blurRadius: 10,
                         offset: Offset(0, 4),
