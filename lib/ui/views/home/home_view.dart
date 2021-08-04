@@ -1,3 +1,4 @@
+import 'package:fantasia/ui/views/home/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -22,8 +23,6 @@ class HomeView extends StatelessWidget {
           body: Center(
             child: Text('HomeView'),
           ),
-        );
-      },
-    );
-  }
+        ),
+      );
 }

@@ -9,12 +9,7 @@ class FantasiaApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final RouterService _routerService = locator<RouterService>();
 
-    return MaterialApp.router(
-      title: "Fantasia",
-      debugShowCheckedModeBanner: false,
-      routeInformationParser: _routerService.router.defaultRouteParser(),
-      routerDelegate: _routerService.router.delegate(),
-      theme: lightTheme,
+    return ThemeBuilder(
       darkTheme: darkTheme,
       themes: appThemes,
       builder: (BuildContext context, ThemeData? regularTheme,
