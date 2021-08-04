@@ -6,7 +6,7 @@
 
 import 'package:auto_route/auto_route.dart' as _i1;
 import 'package:fantasia/ui/views/home/home_view.dart' as _i4;
-import 'package:fantasia/ui/views/startup/startup_view.dart' as _i3;
+import 'package:fantasia/ui/views/start_up/start_up_view.dart' as _i3;
 import 'package:flutter/material.dart' as _i2;
 
 class FantasiaRouter extends _i1.RootStackRouter {
@@ -15,29 +15,29 @@ class FantasiaRouter extends _i1.RootStackRouter {
 
   @override
   final Map<String, _i1.PageFactory> pagesMap = {
-    StartupRoute.name: (routeData) => _i1.AdaptivePage<dynamic>(
+    StartUpRoute.name: (routeData) => _i1.AdaptivePage<dynamic>(
         routeData: routeData,
         builder: (_) {
-          return _i3.StartupView();
+          return _i3.StartUpView();
         }),
     HomeRoute.name: (routeData) => _i1.AdaptivePage<dynamic>(
         routeData: routeData,
         builder: (_) {
-          return _i4.HomeView();
+          return const _i4.HomeView();
         })
   };
 
   @override
   List<_i1.RouteConfig> get routes => [
-        _i1.RouteConfig(StartupRoute.name, path: '/'),
+        _i1.RouteConfig(StartUpRoute.name, path: '/'),
         _i1.RouteConfig(HomeRoute.name, path: '/home-view')
       ];
 }
 
-class StartupRoute extends _i1.PageRouteInfo {
-  const StartupRoute() : super(name, path: '/');
+class StartUpRoute extends _i1.PageRouteInfo {
+  const StartUpRoute() : super(name, path: '/');
 
-  static const String name = 'StartupRoute';
+  static const String name = 'StartUpRoute';
 }
 
 class HomeRoute extends _i1.PageRouteInfo {

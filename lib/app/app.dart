@@ -22,6 +22,7 @@ class FantasiaApp extends StatelessWidget {
         theme: regularTheme,
         darkTheme: darkTheme,
         themeMode: themeMode,
+        debugShowCheckedModeBanner: false,
       ),
     );
   }

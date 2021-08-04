@@ -26,22 +26,28 @@ dev_dependencies:
   flutter_launcher_icons: ^0.9.0
 
   # linting
-  flutter_lints: ^1.0.0
   injectable_generator: ^1.4.1
 
 flutter:
   uses-material-design: true
-
-# Assets Example
-#  assets:
-#    - assets/images/
-#
-# Fonts Example
-#  fonts:
-#    - family: Open Sans
-#      fonts:
-#        - asset: assets/fonts/OpenSans-Italic.ttf
-#          style: italic
+  # Assets Example
+  #  assets:
+  #    - assets/images/
+  #
+  # Fonts Example
+  fonts:
+    - family: Open Sans
+      fonts:
+        # - asset: assets/fonts/Open_Sans/OpenSans-Bold.ttf
+        #   style: italic
+        - asset: assets/fonts/Open_Sans/OpenSans-ExtraBold.ttf
+          weight: 900
+        - asset: assets/fonts/Open_Sans/OpenSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Open_Sans/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Open_Sans/OpenSans-Regular.ttf
+          weight: 500
 #        - asset: assets/fonts/OpenSans-Bold.ttf
 #          weight: 700
 #        - asset: assets/fonts/OpenSans-ExtraBold.ttf
