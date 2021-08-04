@@ -1,6 +1,7 @@
+import 'package:fantasia/app/theme/app_theme.dart';
 import 'package:flutter/material.dart';
-    import 'package:fantasia/app/locator/locator.dart';
-    import 'package:fantasia/app/services/router_service.dart';
+import 'package:fantasia/app/locator/locator.dart';
+import 'package:fantasia/app/services/router_service.dart';
 
 class FantasiaApp extends StatelessWidget {
   @override
@@ -11,12 +12,8 @@ class FantasiaApp extends StatelessWidget {
       title: "Fantasia",
       routeInformationParser: _routerService.router.defaultRouteParser(),
       routerDelegate: _routerService.router.delegate(),
-      theme: ThemeData(
-        brightness: Brightness.light,
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
+      theme: lightTheme,
+      darkTheme: darkTheme,
     );
   }
 }
