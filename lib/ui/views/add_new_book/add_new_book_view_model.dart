@@ -1,5 +1,12 @@
 import 'package:fantasia/app/core/custom_base_view_model.dart';
+import 'package:fantasia/app/services/size_config.dart';
+import 'package:flutter/material.dart';
 
 class AddNewBookViewModel extends CustomBaseViewModel {
-  Future<void> init() async {}
+  late BuildContext _context;
+
+  void init(BuildContext context) {
+    _context = context;
+    SizeConfig().init(context: _context);
+  }
 }
