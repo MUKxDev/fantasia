@@ -10,6 +10,7 @@ class FantasiaApp extends StatelessWidget {
 
     return MaterialApp.router(
       title: "Fantasia",
+      debugShowCheckedModeBanner: false,
       routeInformationParser: _routerService.router.defaultRouteParser(),
       routerDelegate: _routerService.router.delegate(),
       theme: lightTheme,
