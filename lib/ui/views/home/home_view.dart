@@ -1,3 +1,4 @@
+import 'package:fantasia/ui/widgets/dumb/bookOfTheMonth.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -17,8 +18,20 @@ class HomeView extends StatelessWidget {
         Widget? child,
       ) {
         return Scaffold(
-          body: Center(
-            child: Text('HomeView'),
+          appBar: AppBar(
+            title: Text('Home'),
+          ),
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                BookOfTheMonth(
+                  title: 'The way of kings',
+                  author: 'Brandon Sanderson',
+                  imageURL:
+                      'https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/TheWayOfKings.png/220px-TheWayOfKings.png',
+                ),
+              ],
+            ),
           ),
         );
       },
