@@ -1,12 +1,18 @@
 import 'package:fantasia/app/core/custom_base_view_model.dart';
-import 'package:fantasia/app/services/size_config.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:fantasia/app/locator/locator.dart';
+import 'package:fantasia/app/router/router.dart';
+import 'package:fantasia/app/services/router_service.dart';
 
 class StartUpViewModel extends CustomBaseViewModel {
-  late BuildContext _context;
+  Future<void> init() async {}
 
-  void init(BuildContext context) {
-    _context = context;
-    SizeConfig().init(context: _context);
+  final RouterService _routerService = locator<RouterService>();
+
+  void navigateToHome() {
+    _routerService.router.navigate(const HomeRoute());
+  }
+
+  void navigateToAddNewBook() {
+    _routerService.router.navigate(const AddNewBookRoute());
   }
 }
