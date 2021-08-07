@@ -1,26 +1,27 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-const TextStyle fontHeading1 = TextStyle(
+TextStyle fontHeading1 = GoogleFonts.openSans(
   fontSize: 24,
   fontWeight: FontWeight.w800,
 );
 
-const TextStyle fontHeading2 = TextStyle(
+TextStyle fontHeading2 = GoogleFonts.openSans(
   fontSize: 18,
   fontWeight: FontWeight.w700,
 );
 
-const TextStyle fontTitle1 = TextStyle(
+TextStyle fontTitle1 = GoogleFonts.openSans(
   fontSize: 24,
   fontWeight: FontWeight.w700,
 );
 
-const TextStyle fontTitle2 = TextStyle(
+TextStyle fontTitle2 = GoogleFonts.openSans(
   fontSize: 14,
   fontWeight: FontWeight.w600,
 );
 
-const TextStyle fontParagraph = TextStyle(
+TextStyle fontParagraph = GoogleFonts.openSans(
   fontSize: 14,
   fontWeight: FontWeight.w400,
 );

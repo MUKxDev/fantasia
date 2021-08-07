@@ -25,6 +25,7 @@ class BookOfTheMonth extends StatelessWidget {
       child: Container(
         height: 170,
         width: double.infinity,
+        constraints: const BoxConstraints(maxWidth: 600),
         margin: EdgeInsets.all(margin),
         decoration: BoxDecoration(
           color: colorBlue,

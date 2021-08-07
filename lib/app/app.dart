@@ -1,4 +1,5 @@
 import 'package:fantasia/app/theme/app_theme.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fantasia/app/locator/locator.dart';
 import 'package:fantasia/app/services/router_service.dart';
@@ -22,6 +23,7 @@ class FantasiaApp extends StatelessWidget {
         darkTheme: darkTheme,
         themeMode: themeMode,
         debugShowCheckedModeBanner: false,
+        scrollBehavior: const CupertinoScrollBehavior(),
       ),
     );
   }

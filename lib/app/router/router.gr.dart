@@ -35,14 +35,14 @@ class FantasiaRouter extends _i1.RootStackRouter {
 
   @override
   List<_i1.RouteConfig> get routes => [
-        _i1.RouteConfig(StartUpRoute.name, path: '/start-up-view'),
+        _i1.RouteConfig(StartUpRoute.name, path: '/'),
         _i1.RouteConfig(HomeRoute.name, path: '/home-view'),
-        _i1.RouteConfig(AddNewBookRoute.name, path: '/')
+        _i1.RouteConfig(AddNewBookRoute.name, path: '/add-new-book-view')
       ];
 }
 
 class StartUpRoute extends _i1.PageRouteInfo {
-  const StartUpRoute() : super(name, path: '/start-up-view');
+  const StartUpRoute() : super(name, path: '/');
 
   static const String name = 'StartUpRoute';
 }
@@ -54,7 +54,7 @@ class HomeRoute extends _i1.PageRouteInfo {
 }
 
 class AddNewBookRoute extends _i1.PageRouteInfo {
-  const AddNewBookRoute() : super(name, path: '/');
+  const AddNewBookRoute() : super(name, path: '/add-new-book-view');
 
   static const String name = 'AddNewBookRoute';
 }
