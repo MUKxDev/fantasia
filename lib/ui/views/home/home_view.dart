@@ -1,5 +1,9 @@
+import 'package:fantasia/app/models/rule.dart';
+import 'package:fantasia/app/theme/app_colors.dart';
+import 'package:fantasia/app/theme/app_font.dart';
 import 'package:fantasia/ui/views/home/home_view_model.dart';
 import 'package:fantasia/ui/widgets/dumb/book_of_the_month.dart';
+import 'package:fantasia/ui/widgets/dumb/points_guide.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -25,15 +29,20 @@ class HomeView extends StatelessWidget {
             title: const Text('Home'),
           ),
           body: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                const BookOfTheMonth(
-                  title: 'The way of kings',
-                  author: 'Brandon Sanderson',
-                  imageURL:
-                      'https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/TheWayOfKings.png/220px-TheWayOfKings.png',
-                ),
-              ],
+            child: Center(
+              child: Column(
+                children: <Widget>[
+                  // Book of the month
+                  const BookOfTheMonth(
+                    title: 'The way of kings',
+                    author: 'Brandon Sanderson',
+                    imageURL:
+                        'https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/TheWayOfKings.png/220px-TheWayOfKings.png',
+                  ),
+                  // Points Guide
+                  PointsGuide(rules: model.rules)
+                ],
+              ),
             ),
           ),
         );
