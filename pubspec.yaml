@@ -16,6 +16,8 @@ dependencies:
   stacked: ^2.1.7
   stacked_themes: ^0.3.6
   google_fonts: ^2.1.0
+  screenshot: ^1.2.3
+  file_saver: ^0.0.10
 
 dev_dependencies:
   flutter_test:
