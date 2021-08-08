@@ -1,5 +1,9 @@
+import 'dart:developer';
+import 'dart:typed_data';
 import 'package:fantasia/app/core/custom_base_view_model.dart';
 import 'package:fantasia/app/models/rule.dart';
+import 'package:file_saver/file_saver.dart';
+import 'package:screenshot/screenshot.dart';
 
 class HomeViewModel extends CustomBaseViewModel {
   Future<void> init() async {}
@@ -32,4 +36,23 @@ class HomeViewModel extends CustomBaseViewModel {
   ];
 
   List<Rule> get rules => _rules;
+
+  // Tested only for web [needs premesions on IOS/Android]
+  ScreenshotController screenshotController = ScreenshotController();
+
+  void screenshot() {
+    screenshotController.capture(pixelRatio: 2).then((Uint8List? image) async {
+      if (image != null) {
+        final String imageName = 'month_details(${DateTime.now().hashCode})';
+        String path = await FileSaver.instance.saveFile(
+          imageName,
+          image,
+          'png',
+          mimeType: MimeType.PNG,
+        );
+        path += '/$imageName.png';
+        log('Image saved in: $path', name: 'screenshot');
+      }
+    });
+  }
 }
