@@ -41,21 +41,25 @@ class BookOfTheMonth extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(18),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    title,
-                    style: fontHeading1.copyWith(color: colorWhite),
-                  ),
-                  Text(
-                    author,
-                    style: fontParagraph.copyWith(color: colorWhite),
-                  ),
-                ],
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(18),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      title,
+                      style: fontHeading1.copyWith(color: colorWhite),
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Text(
+                      author,
+                      style: fontParagraph.copyWith(color: colorWhite),
+                    ),
+                  ],
+                ),
               ),
             ),
             Padding(
