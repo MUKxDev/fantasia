@@ -13,11 +13,11 @@ ThemeData lightTheme = ThemeData.light().copyWith(
   scaffoldBackgroundColor: colorWhite,
   appBarTheme: AppBarTheme(
     brightness: Brightness.dark,
-    backgroundColor: colorBlue,
+    backgroundColor: primaryColor,
     titleTextStyle: headline1,
   ),
   textTheme: GoogleFonts.openSansTextTheme(),
-  primaryColor: colorBlue,
+  primaryColor: primaryColor,
   elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
     backgroundColor: MaterialStateProperty.all<Color>(colorYellow),
@@ -27,9 +27,11 @@ ThemeData lightTheme = ThemeData.light().copyWith(
 ThemeData darkTheme = ThemeData.dark().copyWith(
   brightness: Brightness.dark,
   textTheme: GoogleFonts.openSansTextTheme(),
-  primaryColor: colorBlue,
+  primaryColor: primaryColor,
+  accentColor: accentColor,
   elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ButtonStyle(
-    backgroundColor: MaterialStateProperty.all<Color>(colorYellow),
-  )),
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(colorYellow),
+    ),
+  ),
 );

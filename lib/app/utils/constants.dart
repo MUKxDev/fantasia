@@ -9,7 +9,12 @@ class BrakePoints {
 }
 
 class Insets {
-  final double smallx = 4;
-  final double small = 8;
-  final double medium = 12;
+  static const double smallx = 4;
+  static const double small = 8;
+  static const double medium = 12;
+}
+
+class AppBorderRadius {
+  static const BorderRadius none = BorderRadius.zero;
+  static const BorderRadius xSmall = BorderRadius.all(Radius.circular(5));
 }

@@ -1,4 +1,3 @@
-
 import 'package:fantasia/app/locator/locator.dart';
 import 'package:fantasia/app/services/router_service.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +10,7 @@ abstract class CustomBaseViewModel extends BaseViewModel {
     _routerService.router.pop();
   }
 
-  void removeFocus() {
+  void unfocus() {
     FocusManager.instance.primaryFocus!.unfocus();
   }
 }
