@@ -42,7 +42,7 @@ class PointsGuide extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 18),
               child: Text(
                 'Points Guide ✨',
-                style: fontTitle1.copyWith(color: colorDarkGrey),
+                style: headline1.copyWith(color: colorDarkGrey),
               ),
             ),
             ListView.builder(

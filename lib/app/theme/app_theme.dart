@@ -14,7 +14,7 @@ ThemeData lightTheme = ThemeData.light().copyWith(
   appBarTheme: AppBarTheme(
     brightness: Brightness.dark,
     backgroundColor: colorBlue,
-    titleTextStyle: fontHeading1,
+    titleTextStyle: headline1,
   ),
   textTheme: GoogleFonts.openSansTextTheme(),
   primaryColor: colorBlue,

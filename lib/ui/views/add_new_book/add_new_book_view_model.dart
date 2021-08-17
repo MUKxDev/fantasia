@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class AddNewBookViewModel extends CustomBaseViewModel {
   late BuildContext _context;
 
-  void init(BuildContext context) {
+  void init({required BuildContext context}) {
     _context = context;
     SizeConfig().init(context: _context);
   }

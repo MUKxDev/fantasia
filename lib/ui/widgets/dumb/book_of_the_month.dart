@@ -50,7 +50,7 @@ class BookOfTheMonth extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       title,
-                      style: fontHeading1.copyWith(color: colorWhite),
+                      style: headline1.copyWith(color: colorWhite),
                       maxLines: 3,
                       overflow: TextOverflow.ellipsis,
                     ),

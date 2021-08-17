@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-TextStyle fontHeading1 = GoogleFonts.openSans(
+TextStyle headline1 = GoogleFonts.openSans(
   fontSize: 24,
   fontWeight: FontWeight.w800,
+  letterSpacing: -1.5,
 );
 
-TextStyle fontHeading2 = GoogleFonts.openSans(
+TextStyle headline2 = GoogleFonts.openSans(
   fontSize: 18,
   fontWeight: FontWeight.w700,
 );
 
-TextStyle fontTitle1 = GoogleFonts.openSans(
+TextStyle headline3 = GoogleFonts.openSans(
   fontSize: 24,
   fontWeight: FontWeight.w700,
 );

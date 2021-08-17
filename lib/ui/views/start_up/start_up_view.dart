@@ -27,7 +27,7 @@ class StartUpView extends StatelessWidget {
             children: <Widget>[
               Text(
                 'Navigate To',
-                style: fontHeading1.copyWith(
+                style: headline1.copyWith(
                   color: Theme.of(context).brightness == Brightness.light
                       ? colorDarkGrey
                       : colorWhite,
