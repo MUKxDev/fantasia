@@ -1,6 +1,6 @@
 import 'package:fantasia/ui/views/home/home_view_model.dart';
-import 'package:fantasia/ui/widgets/dumb/book_of_the_month.dart';
-import 'package:fantasia/ui/widgets/dumb/points_guide.dart';
+import 'package:fantasia/ui/widgets/dumb/homeWidgets/home_book_of_the_month.dart';
+import 'package:fantasia/ui/widgets/dumb/homeWidgets/home_points_guide.dart';
 import 'package:flutter/material.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:stacked/stacked.dart';

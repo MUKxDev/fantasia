@@ -16,17 +16,17 @@ class FantasiaRouter extends _i1.RootStackRouter {
 
   @override
   final Map<String, _i1.PageFactory> pagesMap = {
-    StartUpRoute.name: (routeData) => _i1.AdaptivePage<dynamic>(
+    StartUpRoute.name: (routeData) => _i1.AdaptivePage<Type>(
         routeData: routeData,
         builder: (_) {
           return _i3.StartUpView();
         }),
-    HomeRoute.name: (routeData) => _i1.AdaptivePage<dynamic>(
+    HomeRoute.name: (routeData) => _i1.AdaptivePage<Type>(
         routeData: routeData,
         builder: (_) {
           return const _i4.HomeView();
         }),
-    AddNewBookRoute.name: (routeData) => _i1.AdaptivePage<dynamic>(
+    AddNewBookRoute.name: (routeData) => _i1.AdaptivePage<Type>(
         routeData: routeData,
         builder: (_) {
           return _i5.AddNewBookView();
@@ -36,8 +36,8 @@ class FantasiaRouter extends _i1.RootStackRouter {
   @override
   List<_i1.RouteConfig> get routes => [
         _i1.RouteConfig(StartUpRoute.name, path: '/start-up-view'),
-        _i1.RouteConfig(HomeRoute.name, path: '/home-view'),
-        _i1.RouteConfig(AddNewBookRoute.name, path: '/')
+        _i1.RouteConfig(HomeRoute.name, path: '/'),
+        _i1.RouteConfig(AddNewBookRoute.name, path: '/add-new-book-view')
       ];
 }
 
@@ -48,13 +48,13 @@ class StartUpRoute extends _i1.PageRouteInfo {
 }
 
 class HomeRoute extends _i1.PageRouteInfo {
-  const HomeRoute() : super(name, path: '/home-view');
+  const HomeRoute() : super(name, path: '/');
 
   static const String name = 'HomeRoute';
 }
 
 class AddNewBookRoute extends _i1.PageRouteInfo {
-  const AddNewBookRoute() : super(name, path: '/');
+  const AddNewBookRoute() : super(name, path: '/add-new-book-view');
 
   static const String name = 'AddNewBookRoute';
 }

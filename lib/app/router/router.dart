@@ -8,10 +8,10 @@ export './router.gr.dart';
 
 @AdaptiveAutoRouter(
   replaceInRouteName: "View,Route",
-  routes: <AutoRoute<dynamic>>[
-    AdaptiveRoute<dynamic>(page: StartUpView),
-    AdaptiveRoute<dynamic>(page: HomeView),
-    AdaptiveRoute<dynamic>(page: AddNewBookView, initial: true),
+  routes: <AutoRoute<Type>>[
+    AdaptiveRoute<Type>(page: StartUpView, initial: true),
+    AdaptiveRoute<Type>(page: HomeView),
+    AdaptiveRoute<Type>(page: AddNewBookView),
   ],
 )
 class $FantasiaRouter {}

@@ -9,7 +9,7 @@ import 'package:stacked_themes/stacked_themes.dart';
 class FantasiaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIOverlays(<SystemUiOverlay>[]);
     final RouterService _routerService = locator<RouterService>();
 
     return ThemeBuilder(
@@ -21,8 +21,7 @@ class FantasiaApp extends StatelessWidget {
         title: "Fantasia",
         routeInformationParser: _routerService.router.defaultRouteParser(),
         routerDelegate: _routerService.router.delegate(),
-        // theme: regularTheme,
-        theme: darkTheme,
+        theme: regularTheme,
         darkTheme: darkTheme,
         themeMode: themeMode,
         debugShowCheckedModeBanner: false,
