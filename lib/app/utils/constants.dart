@@ -17,4 +17,6 @@ class Insets {
 class AppBorderRadius {
   static const BorderRadius none = BorderRadius.zero;
   static const BorderRadius xSmall = BorderRadius.all(Radius.circular(5));
+  static const BorderRadius small = BorderRadius.all(Radius.circular(8));
+  static const BorderRadius mid = BorderRadius.all(Radius.circular(12));
 }
