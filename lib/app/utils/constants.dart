@@ -5,7 +5,8 @@ class Constants {}
 class BrakePoints {
   static const int xsmall = 480;
   static const int small = 600;
-  // static const int small = 720;
+  static const int mid = 600;
+  static const int large = 950;
 }
 
 class Insets {

@@ -1,8 +1,9 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:fantasia/app/locator/locator.dart';
+import 'package:fantasia/app/services/router_service.dart';
 import 'package:fantasia/app/theme/app_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fantasia/app/locator/locator.dart';
-import 'package:fantasia/app/services/router_service.dart';
 import 'package:flutter/services.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
@@ -18,6 +19,8 @@ class FantasiaApp extends StatelessWidget {
       builder: (BuildContext context, ThemeData? regularTheme,
               ThemeData? darkTheme, ThemeMode? themeMode) =>
           MaterialApp.router(
+        locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
         title: "Fantasia",
         routeInformationParser: _routerService.router.defaultRouteParser(),
         routerDelegate: _routerService.router.delegate(),

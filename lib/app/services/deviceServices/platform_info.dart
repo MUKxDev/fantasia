@@ -12,12 +12,14 @@ class PlatformInfo {
     this.deviceType,
     this.screenSize,
     this.localWidgetSize,
+    this.platformType,
   });
 
   final Orientation? orientation;
   final DeviceScreenType? deviceType;
   final Size? screenSize;
   final Size? localWidgetSize;
+  final PlatformType? platformType;
 
   PlatformType getCurrentPlatformType({required BuildContext context}) {
     final TargetPlatform _targetPlatform = Theme.of(context).platform;
@@ -48,7 +50,13 @@ class PlatformInfo {
 
   @override
   String toString() {
-    return 'Orientation:$orientation DeviceType:$deviceType ScreenSize:$screenSize LocalWidgetSize:$localWidgetSize';
+    return '''
+    PlatformType: $platformType
+    Orientation:$orientation
+    DeviceType:$deviceType
+    ScreenSize:$screenSize
+    LocalWidgetSize:$localWidgetSize
+    ''';
   }
 
   PlatformType _getPlatformEnumType({required TargetPlatform targetPlatform}) {
